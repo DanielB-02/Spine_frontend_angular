@@ -1,0 +1,21 @@
+import { Component } from '@angular/core';
+import {Platform} from "../../model/platform";
+import {PlatformService} from "../../services/platform.service";
+
+@Component({
+  selector: 'app-platform',
+  templateUrl: './platform.component.html',
+  styleUrl: './platform.component.css'
+})
+export class PlatformComponent {
+  platforms: Platform[];
+
+  constructor(private platformService: PlatformService) {
+  }
+
+  ngOnInit() {
+    this.platformService.findAll().subscribe(data => {
+      this.platforms = data;
+    });
+  }
+}

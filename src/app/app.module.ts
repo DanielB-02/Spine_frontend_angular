@@ -2,15 +2,28 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { ModelComponent } from './model/model.component';
+import { PlatformComponent } from './view/platform/platform.component';
+import { PlatformFormComponent } from './view/platform-form/platform-form.component';
+import {AppRoutingModule} from "./app.routes";
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
+import {PlatformService} from "./services/platform.service";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ModelComponent,
+    PlatformComponent,
+    PlatformFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [PlatformService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
