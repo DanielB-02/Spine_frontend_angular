@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import {Platform} from "../../model/platform";
+import {Platform} from "../../model/platform/platform";
 import {PlatformService} from "../../services/platform.service";
 
 @Component({
