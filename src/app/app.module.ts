@@ -17,6 +17,7 @@ import {PlatformService} from "./services/platform.service";
     PlatformComponent,
     PlatformFormComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -24,6 +25,7 @@ import {PlatformService} from "./services/platform.service";
     FormsModule
   ],
   providers: [PlatformService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
