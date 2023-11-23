@@ -9,7 +9,7 @@
       <tbody>
       <tr *ngFor="let platform of platforms">
         <td>
-          <a [href]="'http://localhost/' + platform.platformName">{{ platform.platformName }}</a>
+          <a [routerLink]="['/platform', platform.platformName]">{{ platform.platformName }}</a>
         </td>
       </tr>
       </tbody>
