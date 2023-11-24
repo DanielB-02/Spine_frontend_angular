@@ -8,7 +8,9 @@
       </thead>
       <tbody>
       <tr *ngFor="let platform of platforms">
-        <td>{{ platform.platformName }}</td>
+        <td>
+          <a [routerLink]="['/platform', platform.platformName]">{{ platform.platformName }}</a>
+        </td>
       </tr>
       </tbody>
     </table>
