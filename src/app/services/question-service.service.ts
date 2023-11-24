@@ -1,23 +1,18 @@
-import {Question} from "../model/question/question";
-import {Observable} from "rxjs";
-import {HttpClient} from "@angular/common/http";
-import {Injectable} from "@angular/core";
-import {Platform} from "../model/platform/platform";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Question } from '../model/question/question';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
   private platformsUrl: string;
+
   constructor(private http: HttpClient) {
-    this.platformsUrl = 'http://localhost:8081/platform'
+    this.platformsUrl = 'http://localhost:8081/question';
   }
 
-  getQuestionsForPlatform(): Observable<Question[]> {
-    return this.http.get<Question[]>(this.platformsUrl);
+  getQuestionsForPlatform(platformName: string): Observable<Question[]> {
+    const url = `${this.platformsUrl}`;
+    return this.http.get<Question[]>(url);
   }
-  public save(question: Question) {
-    return this.http.post<Question>(this.platformsUrl, question);
-  }
-}
-
-export class QuestionServiceService {
 }

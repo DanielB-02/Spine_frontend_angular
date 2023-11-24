@@ -20,7 +20,7 @@ export class PlatformDetailComponent implements OnInit {
     this.loadQuestions();
   }
   private loadQuestions(): void {
-    this.questionService.getQuestionsForPlatform()
+    this.questionService.getQuestionsForPlatform(this.platformName)
       .subscribe(questions => this.questions = questions);
   }
 }
