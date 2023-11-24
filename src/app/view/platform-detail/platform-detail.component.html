@@ -1,1 +1,6 @@
-<h2>{{ platformName }} Details</h2>
+<h2>{{ platformName }} Questions</h2>
+<ul>
+  <li *ngFor="let question of questions">
+    {{ question.textQuestion }}
+  </li>
+</ul>
