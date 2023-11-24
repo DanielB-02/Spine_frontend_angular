@@ -15,4 +15,5 @@ export class QuestionService {
     const url = `${this.platformsUrl}`;
     return this.http.get<Question[]>(url);
   }
+
 }
