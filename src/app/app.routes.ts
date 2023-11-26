@@ -7,7 +7,7 @@ import {PlatformDetailComponent} from "./view/platform-detail/platform-detail.co
 const routes: Routes = [
   { path: 'platforms', component: PlatformComponent },
   { path: 'addplatform', component: PlatformFormComponent },
-  { path: 'platform/:name', component: PlatformDetailComponent }
+  { path: 'platform/:id', component: PlatformDetailComponent }
 ];
 
 @NgModule({

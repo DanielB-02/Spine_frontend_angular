@@ -11,8 +11,8 @@ export class QuestionService {
     this.platformsUrl = 'http://localhost:8081/question';
   }
 
-  getQuestionsForPlatform(platformName: string): Observable<Question[]> {
-    const url = `${this.platformsUrl}`;
+  getQuestionsForPlatform(platformId: string): Observable<Question[]> {
+    const url = `${this.platformsUrl}/platform/${platformId}`;
     return this.http.get<Question[]>(url);
   }
 

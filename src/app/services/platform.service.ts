@@ -19,4 +19,8 @@ export class PlatformService {
   public save(platform: Platform) {
     return this.http.post<Platform>(this.platformsUrl, platform);
   }
+
+  public find(id: string): Observable<Platform> {
+    return this.http.get<Platform>(`${this.platformsUrl}/${id}`);
+  }
 }

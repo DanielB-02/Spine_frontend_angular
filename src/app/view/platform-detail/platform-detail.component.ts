@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {Question} from "../../model/question/question";
-import {QuestionService} from "../../services/question-service.service";
+import {QuestionService} from "../../services/question.service";
+import {Platform} from "../../model/platform/platform";
+import {PlatformService} from "../../services/platform.service";
 
 @Component({
   selector: 'app-platform-detail',
@@ -9,18 +11,26 @@ import {QuestionService} from "../../services/question-service.service";
   styleUrls: ['./platform-detail.component.css']
 })
 export class PlatformDetailComponent implements OnInit {
-  platformName: string;
+  platformId: string;
+  platform: Platform;
   questions: Question[];
 
   constructor(private route: ActivatedRoute,
-              private questionService: QuestionService) { }
+              private questionService: QuestionService,
+              private platformService: PlatformService) { }
 
   ngOnInit(): void {
-    this.platformName = this.route.snapshot.paramMap.get('name');
+    this.platformId = this.route.snapshot.paramMap.get('id');
+    this.loadPlatform();
     this.loadQuestions();
   }
+  private loadPlatform(): void {
+    this.platformService.find(this.platformId)
+      .subscribe(platform => this.platform = platform);
+  }
+
   private loadQuestions(): void {
-    this.questionService.getQuestionsForPlatform(this.platformName)
+    this.questionService.getQuestionsForPlatform(this.platformId)
       .subscribe(questions => this.questions = questions);
   }
 }
