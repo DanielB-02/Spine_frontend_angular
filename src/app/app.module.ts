@@ -20,7 +20,7 @@ import { NavigationColumnComponent } from './view/navigation-column/navigation-c
     ModelComponent,
     PlatformComponent,
     PlatformFormComponent,
-    DashboardComponent
+    DashboardComponent,
     PlatformDetailComponent,
     NavigationColumnComponent
   ],

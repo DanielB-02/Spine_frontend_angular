@@ -28,13 +28,13 @@ export class PlatformService {
   }
 
 
-  public findByScoreDesc(): Observable<Platform[]>{
+  public findByScoreDesc(): Observable<Platform[]> {
     return this.http.get<Platform[]>(this.platformsUrl + '/sortedDesc')
       .pipe(
         map(platforms => platforms.slice(0, 5))
       );
-
+  }
   public find(id: string): Observable<Platform> {
-    return this.http.get<Platform>(`${this.platformsUrl}/${id}`);
+      return this.http.get<Platform>(`${this.platformsUrl}/${id}`);
   }
 }
