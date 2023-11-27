@@ -8,7 +8,7 @@ import {PlatformDetailComponent} from "./view/platform-detail/platform-detail.co
 const routes: Routes = [
   { path: 'platforms', component: PlatformComponent },
   { path: 'addplatform', component: PlatformFormComponent },
-  { path: 'dashboard', component: DashboardComponent }
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'platform/:id', component: PlatformDetailComponent }
 ];
 
