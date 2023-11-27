@@ -34,5 +34,7 @@ export class PlatformService {
         map(platforms => platforms.slice(0, 5))
       );
 
+  public find(id: string): Observable<Platform> {
+    return this.http.get<Platform>(`${this.platformsUrl}/${id}`);
   }
 }
