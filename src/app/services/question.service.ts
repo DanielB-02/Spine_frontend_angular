@@ -17,3 +17,6 @@ export class QuestionService {
   }
 
 }
+
+export class QuestionServiceService {
+}
