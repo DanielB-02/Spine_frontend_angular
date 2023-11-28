@@ -13,7 +13,9 @@ export class AnswerService {
   constructor(private http: HttpClient) {
     this.platformsUrl = 'http://localhost:8081/answer';
   }
-  getAllAnswers(): Observable<Answer[]> {
-    return this.http.get<Answer[]>(`${this.platformsUrl}`);
+
+  getAnswersForPlatform(platformId: string): Observable<Answer[]> {
+    const url = `${this.platformsUrl}`;
+    return this.http.get<Answer[]>(url);
   }
 }

@@ -21,7 +21,7 @@ export class PlatformAnswerComponent implements OnInit{
               private answerService: AnswerService,
               private platformService: PlatformService) { }
   ngOnInit(): void {
-    // this.platformId = this.route.snapshot.paramMap.get('id');
+    this.platformId = this.route.snapshot.paramMap.get('id');
     // this.loadPlatform();
     this.loadAnswers();
   }
@@ -30,7 +30,7 @@ export class PlatformAnswerComponent implements OnInit{
       .subscribe(platform => this.platform = platform);
   }
   private loadAnswers(): void {
-    this.answerService.getAllAnswers()
+    this.answerService.getAnswersForPlatform(this.platformId)
       .subscribe(answer => this.answers = answer);
   }
 
