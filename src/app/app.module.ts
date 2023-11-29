@@ -9,13 +9,20 @@ import {AppRoutingModule} from "./app.routes";
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {PlatformService} from "./services/platform.service";
+import { DashboardComponent } from './view/dashboard/dashboard/dashboard.component';
+import { PlatformDetailComponent } from './view/platform-detail/platform-detail.component';
+import { NavigationColumnComponent } from './view/navigation-column/navigation-column.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ModelComponent,
     PlatformComponent,
-    PlatformFormComponent
+    PlatformFormComponent,
+    DashboardComponent,
+    PlatformDetailComponent,
+    NavigationColumnComponent
   ],
 
   imports: [
