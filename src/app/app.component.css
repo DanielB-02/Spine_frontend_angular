@@ -2,9 +2,14 @@
     display: flex;
 }
 
-.flex-column {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    background-color: #d66b59;
+/*.flex-column {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    flex-grow: 1;*/
+/*    background-color: #e76352;*/
+/*}*/
+
+.background-card {
+  background-color: #373737;
 }
+
