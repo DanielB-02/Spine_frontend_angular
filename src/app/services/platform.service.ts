@@ -14,11 +14,11 @@ export class PlatformService {
   }
 
   public findAll(): Observable<Platform[]> {
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/vnd.spine.api.v2+json',
-      'Accept': 'application/vnd.spine.api.v2+json'
-    });
-    return this.http.get<Platform[]>(this.platformsUrl, {headers: headers});
+    // const headers = new HttpHeaders({
+    //   'Content-Type': 'application/vnd.spine.api.v2+json',
+    //   'Accept': 'application/vnd.spine.api.v2+json'
+    // });
+    return this.http.get<Platform[]>(this.platformsUrl);
   }
 
   public save(platform: Platform) {

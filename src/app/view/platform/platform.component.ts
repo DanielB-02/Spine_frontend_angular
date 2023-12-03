@@ -14,7 +14,6 @@ export class PlatformComponent {
   }
 
   ngOnInit() {
-    // this.platformService.getData().subscribe();
     this.platformService.findAll().subscribe(
       data => {
       this.platforms = data;
