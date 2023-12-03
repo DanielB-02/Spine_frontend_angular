@@ -7,17 +7,13 @@ import {map, Observable} from "rxjs";
 export class PlatformService {
 
   private platformsUrl: string;
-  private
+
 
   constructor(private http: HttpClient) {
     this.platformsUrl = 'http://localhost:8081/platform';
   }
 
   public findAll(): Observable<Platform[]> {
-    // const headers = new HttpHeaders({
-    //   'Content-Type': 'application/vnd.spine.api.v2+json',
-    //   'Accept': 'application/vnd.spine.api.v2+json'
-    // });
     return this.http.get<Platform[]>(this.platformsUrl);
   }
 
