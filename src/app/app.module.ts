@@ -6,12 +6,13 @@ import { ModelComponent } from './model/model.component';
 import { PlatformComponent } from './view/platform/platform.component';
 import { PlatformFormComponent } from './view/platform-form/platform-form.component';
 import {AppRoutingModule} from "./app.routes";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {PlatformService} from "./services/platform.service";
 import { DashboardComponent } from './view/dashboard/dashboard/dashboard.component';
 import { PlatformDetailComponent } from './view/platform-detail/platform-detail.component';
 import { NavigationColumnComponent } from './view/navigation-column/navigation-column.component';
+import {ApiHeadersInterceptor} from "./conf/http-interceptor";
 
 
 @NgModule({
@@ -29,9 +30,16 @@ import { NavigationColumnComponent } from './view/navigation-column/navigation-c
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [PlatformService],
+  providers: [
+    PlatformService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ApiHeadersInterceptor,
+      multi: true,
+    }
+  ],
 
   bootstrap: [AppComponent]
 })

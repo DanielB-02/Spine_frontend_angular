@@ -8,6 +8,7 @@ export class PlatformService {
 
   private platformsUrl: string;
 
+
   constructor(private http: HttpClient) {
     this.platformsUrl = 'http://localhost:8081/platform';
   }
