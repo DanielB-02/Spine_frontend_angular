@@ -1,5 +1,58 @@
-<!--<nav class="container">-->
-<!--    <div class="flex-column">-->
-<!--        <p>navigation-column works!</p>-->
-<!--    </div>-->
-<!--</nav>-->
+<!-- Assuming the 'linear-gradient' and other mixins are defined and compiled correctly in your SCSS -->
+
+<!-- Sidebar -->
+<div class="sidebar">
+
+  <!-- Logo Section -->
+  <div class="logo">
+    <a href="https://www.creative-tim.com">
+      <!-- Logo Image -->
+      <div class="logo-img">
+        <img src="assets/img/LOGO-SPINE-DARK-BG.png" alt="logo" class="sidebar-logo">
+      </div>
+    </a>
+  </div>
+
+  <!-- Sidebar Wrapper -->
+  <div class="sidebar-wrapper">
+    <ul class="nav">
+      <!-- Dashboard Item -->
+      <li class="nav-item active">
+        <a routerLink="/dashboard">
+          <i class="tim-icons icon-chart-pie-36"></i>
+          <p>Dashboard</p>
+        </a>
+      </li>
+
+      <!-- Icons Item -->
+      <li class="nav-item">
+        <a routerLink="/platforms" class="btn btn-info">List Platforms</a>
+      </li>
+
+      <!-- Maps Item -->
+      <li class="list-inline-item">
+        <a routerLink="/addplatform" class="btn btn-info">Add Platform</a>
+      </li>
+
+      <!-- Notifications Item -->
+
+      <!-- User Profile Item -->
+      <li class="nav-item">
+        <a routerLink="/user">
+          <i class="tim-icons icon-single-02"></i>
+          <p>User Profile</p>
+        </a>
+      </li>
+
+
+      <!-- RTL Support Item -->
+      <li class="nav-item">
+        <a routerLink="/rtl">
+          <i class="tim-icons icon-world"></i>
+          <p>RTL Support</p>
+        </a>
+      </li>
+      <!-- You can add more items here -->
+    </ul>
+  </div>
+</div>

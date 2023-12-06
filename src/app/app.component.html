@@ -1,9 +1,8 @@
 <div class="container">
 
   <div class="row">
-<!--    <div class="col-md-2 flex-column">-->
-<!--      <app-navigation-column></app-navigation-column>-->
-<!--    </div>-->
+    <div class="col-md-2 flex-column">
+    </div>
     <div class="col-md-12">
       <div class="card background-card my-5">
         <div class="card-body">
@@ -12,16 +11,11 @@
             <li class="list-inline-item">
               <a routerLink="/dashboard" class="btn btn-info">Dashboard</a>
             </li>
-            <li class="list-inline-item">
-              <a routerLink="/platforms" class="btn btn-info">List Platforms</a>
-            </li>
-            <li class="list-inline-item">
-              <a routerLink="/addplatform" class="btn btn-info">Add Platform</a>
-            </li>
           </ul>
         </div>
       </div>
       <router-outlet></router-outlet>
+      <app-navigation-column></app-navigation-column>
     </div>
   </div>
 </div>
