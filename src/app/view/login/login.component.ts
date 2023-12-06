@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatCardModule} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
@@ -8,6 +8,7 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 import {Router} from "@angular/router";
 import {AuthService} from "../../auth/auth.service";
 import {UserStorageService} from "../../auth/user-storage.service";
+import {LoginStateService} from "../../services/login.state.service";
 
 @Component({
   selector: 'app-login',
@@ -15,15 +16,16 @@ import {UserStorageService} from "../../auth/user-storage.service";
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-
   loginForm!: FormGroup;
   hidePassword = true;
+  showLoginScreen: boolean = true;
 
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService,
     private snackBar: MatSnackBar,
-    private router: Router
+    private router: Router,
+    private loginStateService: LoginStateService
   ) { }
 
   ngOnInit(): void {
@@ -50,11 +52,10 @@ export class LoginComponent {
     this.authService.login(email, password).subscribe(
       (res) => {
 
-        // if (UserStorageService.isAdminLoggedIn()) {
-        //   this.router.navigateByUrl('admin/dashboard');
-        // } else if (UserStorageService.isCustomerLoggedIn()) {
-        //   this.router.navigateByUrl('customer/dashboard');
-        // }
+        if (UserStorageService.isCustomerLoggedIn()) {
+          this.router.navigateByUrl('dashboard-view');
+          this.loginStateService.updateShowLoginScreen(false);
+        }
 
         console.log('res', res);
       },

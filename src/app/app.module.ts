@@ -20,6 +20,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {MatToolbarModule} from "@angular/material/toolbar";
+import {DashboardViewComponent} from "./view/dashboard-view/dashboard-view.component";
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import {MatToolbarModule} from "@angular/material/toolbar";
     DashboardComponent,
     PlatformDetailComponent,
     NavigationColumnComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardViewComponent
   ],
 
   imports: [
@@ -49,6 +51,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
   ],
   providers: [
     PlatformService,
+    LoginComponent,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: ApiHeadersInterceptor,
