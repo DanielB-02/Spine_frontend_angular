@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.column {
+  flex: 1;
+}
+
+.column1 {
+  background-color: orange;
+  height: 290px;
+  width: 100px;
+  position: relative;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
