@@ -31,8 +31,7 @@
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
-            ],
-            "scripts": []
+            ]
           },
           "configurations": {
             "production": {
@@ -92,10 +91,9 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
-            ],
-            "scripts": []
+              "src/styles.scss",
+              "@angular/material/prebuilt-themes/indigo-pink.css"
+            ]
           }
         }
       }

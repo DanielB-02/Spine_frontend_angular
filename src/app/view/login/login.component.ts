@@ -16,7 +16,7 @@ import {LoginStateService} from "../../services/login.state.service";
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  loginForm!: FormGroup;
+  loginForm: FormGroup;
   hidePassword = true;
   showLoginScreen: boolean = true;
 
