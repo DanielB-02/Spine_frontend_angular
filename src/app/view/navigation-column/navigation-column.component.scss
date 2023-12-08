@@ -1,0 +1,114 @@
+$primary-start: #FF0000; // Start color
+$primary-end: #FF7809; // End color
+$opacity-8: rgba(255, 255, 255, 0.8); // Opacity for hover states
+$full-width: 100%; // Used for full width
+$white: #fff; // White color
+$sidebar-box-shadow: 0px 0px 45px 0px rgba(0,0,0,0.6); // Sidebar box shadow
+
+.sidebar {
+  height: calc(100vh - 90px);
+  width: 230px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: linear-gradient(170deg, $primary-start, $primary-end);
+  background-size: cover;
+  background-position: center center;
+  display: block;
+  box-shadow: $sidebar-box-shadow;
+  margin-top: 80px;
+  margin-left: 20px;
+  border-radius: 5px;
+
+  .sidebar-wrapper {
+    width: $full-width;
+    min-height: 100%;
+    max-height: calc(100vh - 705px);
+    z-index: 4;
+    position: relative;
+    overflow: auto;
+
+    .nav {
+      margin-top: 20px;
+      display: block;
+
+      li {
+        > a {
+          margin: 10px 15px 0;
+          border-radius: 3px;
+          color: $white;
+          padding: 10px 15px;
+          text-decoration: none;
+          display: block;
+          transition: background-color .3s;
+        }
+
+        &:hover {
+          > a {
+            background-color: $opacity-8;
+          }
+        }
+
+        &.active > a {
+          background-color: $opacity-8;
+          position: relative;
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: -5px;
+            width: 5px;
+            height: 5px;
+            background-color: $white;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      i {
+        font-size: 24px;
+        float: left;
+        margin-right: 15px;
+        line-height: 30px;
+        width: 30px;
+        text-align: center;
+      }
+
+      p {
+        margin: 0;
+        display: inline-block;
+      }
+    }
+  }
+  .logo {
+    background-image: url('/assets/img/LOGO-SPINE-DARK-BG.png');
+
+
+  }
+  .logo-img {
+    height: 100px; /* This will maintain the aspect ratio */
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+  .sidebar-logo {
+    width: 100px; /* Set the width to the desired size */
+    height: auto; /* This will maintain the aspect ratio */
+  }
+  .nav-item {
+    .nav-link {
+      display: flex;
+      justify-content: space-between; // This will push content to the edges
+      align-items: center; // This will center align the items vertically
+      width: 100%; // Ensure the link takes full width of the nav-item
+      .nav-icon {
+        float: right;
+        height: 25px;
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+

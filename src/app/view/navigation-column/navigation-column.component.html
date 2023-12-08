@@ -1,5 +1,53 @@
-<nav class="container">
-    <div class="flex-column">
-        <p>navigation-column works!</p>
-    </div>
-</nav>
+<!-- Assuming the 'linear-gradient' and other mixins are defined and compiled correctly in your SCSS -->
+
+<!-- Sidebar -->
+<div class="sidebar">
+
+  <!-- Logo Section -->
+  <div class="logo">
+      <div class="logo-img">
+        <img src="assets/img/LOGO-SPINE-DARK-BG.png" alt="logo" class="sidebar-logo">
+      </div>
+  </div>
+
+  <!-- Sidebar Wrapper -->
+  <div class="sidebar-wrapper">
+    <ul class="nav">
+      <li class="nav-item">
+        <a routerLink="/dashboard" class="nav-link">
+          <span>Dashboard</span>
+          <img src="assets/img/icon-dashboard.png" alt="dashboard icon" class="nav-icon">
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="/platforms" class="nav-link">
+          <i class="tim-icons icon-chart-pie-36"></i>
+          <span>List Platforms</span>
+          <img src="assets/img/icon-files.png" alt="dashboard icon" class="nav-icon">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/addplatform" class="nav-link">
+          <i class="tim-icons icon-chart-pie-36"></i>
+          <span>Add Platform</span>
+          <img src="assets/img/icon-add-file.png" alt="dashboard icon" class="nav-icon">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/adminpanel" class="nav-link">
+          <i class="tim-icons icon-chart-pie-36"></i>
+          <span>Admin Panel</span>
+          <img src="assets/img/icon-admin.png" alt="dashboard icon" class="nav-icon">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/dashboard" class="nav-link">
+          <i class="tim-icons icon-chart-pie-36"></i>
+          <span>Uitloggen</span>
+          <img src="assets/img/icon_logout.png" alt="dashboard icon" class="nav-icon">
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

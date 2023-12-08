@@ -1,0 +1,30 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name top 10</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let platform of platformsAsc">
+        <td>{{ platform.platformName }}</td>
+      </tr>
+
+      </tbody>
+    </table>
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name bottom 5</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let platform of platformsDesc">
+        <td>{{ platform.platformName }}</td>
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>

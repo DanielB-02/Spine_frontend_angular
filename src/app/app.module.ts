@@ -6,11 +6,22 @@ import { ModelComponent } from './model/model.component';
 import { PlatformComponent } from './view/platform/platform.component';
 import { PlatformFormComponent } from './view/platform-form/platform-form.component';
 import {AppRoutingModule} from "./app.routes";
-import {HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {PlatformService} from "./services/platform.service";
+import { DashboardComponent } from './view/dashboard/dashboard/dashboard.component';
 import { PlatformDetailComponent } from './view/platform-detail/platform-detail.component';
 import { NavigationColumnComponent } from './view/navigation-column/navigation-column.component';
+import {ApiHeadersInterceptor} from "./conf/http-interceptor";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {LoginComponent} from "./view/login/login.component";
+import {MatCardModule} from "@angular/material/card";
+import {MatInputModule} from "@angular/material/input";
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {DashboardViewComponent} from "./view/dashboard-view/dashboard-view.component";
+
 
 @NgModule({
   declarations: [
@@ -18,17 +29,35 @@ import { NavigationColumnComponent } from './view/navigation-column/navigation-c
     ModelComponent,
     PlatformComponent,
     PlatformFormComponent,
+    DashboardComponent,
     PlatformDetailComponent,
     NavigationColumnComponent,
+    LoginComponent,
+    DashboardViewComponent
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    MatButtonModule,
+    MatToolbarModule,
   ],
-  providers: [PlatformService],
+  providers: [
+    PlatformService,
+    LoginComponent,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ApiHeadersInterceptor,
+      multi: true,
+    }
+  ],
 
   bootstrap: [AppComponent]
 })
