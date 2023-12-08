@@ -4,12 +4,16 @@ import {PlatformComponent} from "./view/platform/platform.component";
 import {PlatformFormComponent} from "./view/platform-form/platform-form.component";
 import {DashboardComponent} from "./view/dashboard/dashboard/dashboard.component";
 import {PlatformDetailComponent} from "./view/platform-detail/platform-detail.component";
+import {LoginComponent} from "./view/login/login.component";
+import {DashboardViewComponent} from "./view/dashboard-view/dashboard-view.component";
 
 const routes: Routes = [
   { path: 'platforms', component: PlatformComponent },
   { path: 'addplatform', component: PlatformFormComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'platform/:id', component: PlatformDetailComponent }
+  { path: 'dashboard-view', component: DashboardViewComponent },
+  { path: 'dashboard', component: DashboardComponent},
+  { path: 'platform/:id', component: PlatformDetailComponent },
+  { path: 'login', component: LoginComponent}
 ];
 
 @NgModule({
