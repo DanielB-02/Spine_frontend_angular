@@ -1,7 +1,19 @@
 <h2>{{ platform.platformName }} Questions</h2>
-<ul>
-  <li *ngFor="let question of questions">
-    {{ question.textQuestion }}
-  </li>
-  <app-platform-answer></app-platform-answer>
-</ul>
+<!--<ul>-->
+<!--  <li *ngFor="let question of questions">-->
+<!--    {{ question.textQuestion }}-->
+<!--  </li>-->
+<!--  <app-platform-answer></app-platform-answer>-->
+<!--</ul>-->
+<div *ngFor="let question of questions">
+ {{ question.textQuestion }}
+  <div>
+    <ul>
+      <!-- Nest the ngIf inside ngFor -->
+      <ng-container *ngFor="let answer of answers">
+        <li *ngIf="answer.id === question.id">
+          {{ answer.textAnswer }}
+      </ng-container>
+    </ul>
+  </div>
+</div>

@@ -11,7 +11,6 @@ import {FormsModule} from "@angular/forms";
 import {PlatformService} from "./services/platform.service";
 import { PlatformDetailComponent } from './view/platform-detail/platform-detail.component';
 import { NavigationColumnComponent } from './view/navigation-column/navigation-column.component';
-import {PlatformAnswerComponent} from "./view/platform-answer/platform-answer.component";
 
 @NgModule({
   declarations: [
@@ -21,7 +20,6 @@ import {PlatformAnswerComponent} from "./view/platform-answer/platform-answer.co
     PlatformFormComponent,
     PlatformDetailComponent,
     NavigationColumnComponent,
-    PlatformAnswerComponent
   ],
 
   imports: [
