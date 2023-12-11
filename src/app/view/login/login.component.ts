@@ -53,7 +53,7 @@ export class LoginComponent {
       (res) => {
 
         if (UserStorageService.isCustomerLoggedIn()) {
-          this.router.navigateByUrl('dashboard-view');
+          this.router.navigateByUrl('dashboard');
           this.loginStateService.updateShowLoginScreen(false);
         }
 
