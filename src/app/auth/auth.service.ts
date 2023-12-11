@@ -11,6 +11,7 @@ export const AUTH_HEADER = 'authorization';
   providedIn: 'root'
 })
 export class AuthService {
+  session: any;
 
   constructor(
     private http: HttpClient,
@@ -36,6 +37,12 @@ export class AuthService {
         return throwError(error);
       })
     );
+  }
+
+  logout() {
+    this.userStorageService.signOut();
+    this.session = undefined;
+    // redirect to landing page
   }
 
   register(signupRequest: any): Observable<any> {
