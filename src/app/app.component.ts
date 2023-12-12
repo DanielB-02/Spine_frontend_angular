@@ -1,6 +1,4 @@
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
-import { LoginComponent } from "./view/login/login.component";
-import {LoginStateService} from "./services/login.state.service";
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,16 +6,6 @@ import {LoginStateService} from "./services/login.state.service";
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements AfterViewInit{
-  constructor(
-    public loginComponent: LoginComponent,
-    private loginStateService: LoginStateService
-  ) { }
+export class AppComponent {
 
-  //
-  ngAfterViewInit() {
-    this.loginStateService.showLoginScreen$.subscribe((value) => {
-      this.loginComponent.showLoginScreen = value;
-    })
-  }
 }

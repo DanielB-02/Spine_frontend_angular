@@ -2,10 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {PlatformComponent} from "./view/platform/platform.component";
 import {PlatformFormComponent} from "./view/platform-form/platform-form.component";
-import {DashboardComponent} from "./view/dashboard/dashboard/dashboard.component";
 import {PlatformDetailComponent} from "./view/platform-detail/platform-detail.component";
 import {LoginComponent} from "./view/login/login.component";
-
+import {DashboardComponent} from "./view/dashboard/dashboard/dashboard.component";
 import {AdminPanelComponent} from "./view/admin-panel/admin-panel.component";
 import {AddUserComponent} from "./view/admin-panel/admin-panel-options/add-user/add-user.component";
 
@@ -24,3 +23,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
