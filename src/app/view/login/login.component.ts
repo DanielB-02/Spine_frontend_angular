@@ -8,7 +8,6 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 import {Router} from "@angular/router";
 import {AuthService} from "../../auth/auth.service";
 import {UserStorageService} from "../../auth/user-storage.service";
-import {LoginStateService} from "../../services/login.state.service";
 
 @Component({
   selector: 'app-login',
@@ -25,7 +24,6 @@ export class LoginComponent {
     private authService: AuthService,
     private snackBar: MatSnackBar,
     private router: Router,
-    private loginStateService: LoginStateService
   ) { }
 
   ngOnInit(): void {
@@ -53,8 +51,7 @@ export class LoginComponent {
       (res) => {
 
         if (UserStorageService.isCustomerLoggedIn()) {
-          this.router.navigateByUrl('dashboard-view');
-          this.loginStateService.updateShowLoginScreen(false);
+          this.router.navigateByUrl('');
         }
 
         console.log('res', res);

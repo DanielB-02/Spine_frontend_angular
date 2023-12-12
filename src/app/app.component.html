@@ -1,15 +1,3 @@
-<div class="container">
-  <div *ngIf="loginComponent.showLoginScreen">
-    <app-login></app-login>
-  </div>
-</div>
-<!-- app.component.html -->
-
-<div class="app-container">
-  <div class="sidebar">
-   <app-navigation-column></app-navigation-column>
-  </div>
-  <div class="main-content">
-    <router-outlet></router-outlet> <!-- Where the routed content will be displayed -->
-  </div>
+<div>
+  <router-outlet></router-outlet>
 </div>

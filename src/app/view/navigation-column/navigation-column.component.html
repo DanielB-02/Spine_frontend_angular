@@ -14,39 +14,44 @@
   <div class="sidebar-wrapper">
     <ul class="nav">
       <li class="nav-item">
-        <a routerLink="/dashboard" class="nav-link">
+        <a routerLink="/main-view/dashboard" class="nav-link nav-text-element">
           <span>Dashboard</span>
           <img src="assets/img/icon-dashboard.png" alt="dashboard icon" class="nav-icon">
         </a>
       </li>
 
       <li class="nav-item">
-        <a routerLink="/platforms" class="nav-link">
+        <a routerLink="/main-view/platforms" class="nav-link nav-text-element">
           <i class="tim-icons icon-chart-pie-36"></i>
           <span>List Platforms</span>
           <img src="assets/img/icon-files.png" alt="dashboard icon" class="nav-icon">
         </a>
       </li>
       <li class="nav-item">
-        <a routerLink="/addplatform" class="nav-link">
+        <a routerLink="/main-view/addplatform" class="nav-link nav-text-element">
           <i class="tim-icons icon-chart-pie-36"></i>
           <span>Add Platform</span>
           <img src="assets/img/icon-add-file.png" alt="dashboard icon" class="nav-icon">
         </a>
       </li>
       <li class="nav-item">
-        <a routerLink="/adminpanel" class="nav-link">
+        <a routerLink="/main-view/adminpanel" class="nav-link nav-text-element">
           <i class="tim-icons icon-chart-pie-36"></i>
           <span>Admin Panel</span>
           <img src="assets/img/icon-admin.png" alt="dashboard icon" class="nav-icon">
         </a>
       </li>
-      <li class="nav-item">
-        <a routerLink="/dashboard" class="nav-link">
+      <li class="nav-item" (click)="uitloggenClicked()">
+        <div class="nav-link nav-text-element nav-text-element-repair">
           <i class="tim-icons icon-chart-pie-36"></i>
           <span>Uitloggen</span>
           <img src="assets/img/icon_logout.png" alt="dashboard icon" class="nav-icon">
-        </a>
+        </div>
+<!--        <a #uitloggenLink routerLink="/" class="nav-link">-->
+<!--          <i class="tim-icons icon-chart-pie-36"></i>-->
+<!--          <span>Uitloggen</span>-->
+<!--          <img src="assets/img/icon_logout.png" alt="dashboard icon" class="nav-icon">-->
+<!--        </a>-->
       </li>
     </ul>
   </div>
