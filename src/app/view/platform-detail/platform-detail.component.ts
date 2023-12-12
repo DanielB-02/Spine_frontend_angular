@@ -13,7 +13,7 @@ import {map} from "rxjs";
 @Component({
   selector: 'app-platform-detail',
   templateUrl: './platform-detail.component.html',
-  styleUrls: ['./platform-detail.component.css']
+  styleUrls: ['./platform-detail.component.scss']
 })
 export class PlatformDetailComponent implements OnInit {
   platformId: string;
