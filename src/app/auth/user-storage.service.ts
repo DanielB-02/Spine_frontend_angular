@@ -63,9 +63,8 @@ export class UserStorageService {
     return true;
   }
 
-  static signOut(): void {
+  public signOut() {
     window.localStorage.removeItem(TOKEN);
     window.localStorage.removeItem(USER);
   }
-
 }

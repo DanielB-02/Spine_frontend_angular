@@ -20,7 +20,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {MatToolbarModule} from "@angular/material/toolbar";
-
+import {MainViewComponent} from "./view/main-view/main-view.component";
 
 
 @NgModule({
@@ -33,6 +33,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
     PlatformDetailComponent,
     NavigationColumnComponent,
     LoginComponent,
+    MainViewComponent
   ],
 
   imports: [
