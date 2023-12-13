@@ -2,14 +2,18 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Platform } from '../model/platform/platform';
 import {map, Observable} from "rxjs";
+import {environment} from "../environments/environment";
+
+const BASIC_URL = environment['BASIC_URL'];
 
 @Injectable()
 export class PlatformService {
 
   private platformsUrl: string;
 
+
   constructor(private http: HttpClient) {
-    this.platformsUrl = 'http://localhost:8081/platform';
+    this.platformsUrl = BASIC_URL + 'platform';
   }
 
   public findAll(): Observable<Platform[]> {
