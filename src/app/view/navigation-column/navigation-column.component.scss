@@ -96,19 +96,21 @@ $sidebar-box-shadow: 0px 0px 45px 0px rgba(0,0,0,0.6); // Sidebar box shadow
     width: 100px; /* Set the width to the desired size */
     height: auto; /* This will maintain the aspect ratio */
   }
-  .nav-item {
-    .nav-link {
-      display: flex;
-      justify-content: space-between; // This will push content to the edges
-      align-items: center; // This will center align the items vertically
-      width: 100%; // Ensure the link takes full width of the nav-item
-      .nav-icon {
-        float: right;
-        height: 25px;
-        padding-right: 10px;
-      }
-    }
+}
+
+.nav-text-element {
+  width: 100%; // Ensure the link takes full width of the nav-item
+  .nav-icon {
+    float: right;
+    height: 25px;
+    padding-right: 10px;
   }
 }
 
+.nav-text-element-repair {
+  font: 400 14px/20px Roboto, sans-serif;
+  color: white;
+  letter-spacing: .0178571429em;
+  margin: 10px 15px 0;
+}
 
