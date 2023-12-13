@@ -47,6 +47,7 @@ import {MainViewComponent} from "./view/main-view/main-view.component";
     MatIconModule,
     MatButtonModule,
     MatToolbarModule,
+
   ],
   providers: [
     PlatformService,

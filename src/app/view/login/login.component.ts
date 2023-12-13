@@ -51,7 +51,7 @@ export class LoginComponent {
       (res) => {
 
         if (UserStorageService.isCustomerLoggedIn()) {
-          this.router.navigateByUrl('');
+          this.router.navigateByUrl('/main-view/dashboard');
         }
 
         console.log('res', res);
