@@ -17,7 +17,7 @@ const routes: Routes = [
       { path: 'platforms', component: PlatformComponent },
       { path: 'addplatform', component: PlatformFormComponent },
       { path: 'platform/:id', component: PlatformDetailComponent },
-      { path: 'admin-panel', component: AdminPanelComponent },
+      { path: 'adminpanel', component: AdminPanelComponent },
       { path: 'add-user', component: AddUserComponent}
     ]
   },
