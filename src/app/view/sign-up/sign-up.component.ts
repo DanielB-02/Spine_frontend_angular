@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import {AuthService} from "../../auth/auth.service";
+import { MatInput } from "@angular/material/input";
 
 @Component({
   selector: 'app-sign-up',
@@ -28,6 +29,7 @@ export class SignUpComponent {
       email: [null, [Validators.email, Validators.required]],
       password: [null, [Validators.required]],
       confirmPassword: [null, [Validators.required]],
+      fictRole: [false],
     });
   }
 
@@ -69,5 +71,10 @@ export class SignUpComponent {
         this.signupForm.controls[i].updateValueAndValidity();
       }
     }
+  }
+
+  public setFictRole(fictRole: boolean) {
+    this.signupForm.get('fictRole').setValue(fictRole);
+    console.log(this.signupForm.get('fictRole'));
   }
 }

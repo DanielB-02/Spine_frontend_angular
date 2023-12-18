@@ -54,6 +54,16 @@
           </mat-error>
         </mat-form-field>
 
+<!--        <mat-form-field appearance="outline">-->
+<!--          <button mat-raised-button color="secondary" type="button" (click)="setFictRole(true)">Ficter</button>-->
+<!--          <button mat-raised-button color="secondary" type="button" (click)="setFictRole(false)">Read Only</button>-->
+<!--        </mat-form-field>-->
+
+        <div class="button-container">
+          <button mat-raised-button color="secondary" type="button" (click)="setFictRole(true)">Ficter</button>
+          <button mat-raised-button color="secondary" type="button" (click)="setFictRole(false)">Read Only</button>
+        </div>
+
         <button mat-raised-button color="primary" type="submit" [disabled]="signupForm.invalid"
                 (click)="onSubmit()">Sign Up</button>
       </form>
