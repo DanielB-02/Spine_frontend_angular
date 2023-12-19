@@ -112,5 +112,9 @@ $sidebar-box-shadow: 0px 0px 45px 0px rgba(0,0,0,0.6); // Sidebar box shadow
   color: white;
   letter-spacing: .0178571429em;
   margin: 10px 15px 0;
+  &:hover {
+    background: linear-gradient(170deg, darken($primary-start, 15%), darken($primary-end, 15%));
+  }
+  cursor: pointer;
 }
 
