@@ -6,7 +6,7 @@
         <form [formGroup]="signupForm" class="signup-form">
 
           <mat-form-field appearance="outline" class="signup-form-input-field">
-            <mat-label>Name</mat-label>
+            <mat-label>First Name</mat-label>
             <input matInput formControlName="firstName" placeholder="First Name" required>
             <mat-error *ngIf="signupForm.get('firstName').invalid && signupForm.get('firstName').touched">
               Please enter a valid first name.
@@ -56,8 +56,8 @@
           </mat-form-field>
 
           <div class="button-container">
-            <button mat-raised-button color="secondary" type="button" (click)="setFictRole(true)">Ficter</button>
-            <button mat-raised-button color="secondary" type="button" (click)="setFictRole(false)">Read Only</button>
+            <button mat-raised-button color="primary" type="button" (click)="setFictRole(true)">Ficter</button>
+            <button mat-raised-button color="primary" type="button" (click)="setFictRole(false)">Read Only</button>
           </div>
 
           <div class="signup-form-submit">
