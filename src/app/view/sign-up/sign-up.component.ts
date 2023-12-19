@@ -58,7 +58,7 @@ export class SignUpComponent {
           console.log(response);
           this.snackBar.open('Sign up successful!', 'Close', { duration: 5000 });
           // Navigate to the login page or perform any other action
-          this.router.navigateByUrl("/login");
+          this.router.navigateByUrl("/main-view/adminpanel");
         },
         (error) => {
           this.isSpinning = false;
