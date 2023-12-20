@@ -5,9 +5,9 @@ import {PlatformFormComponent} from "./view/platform-form/platform-form.componen
 import {PlatformDetailComponent} from "./view/platform-detail/platform-detail.component";
 import {LoginComponent} from "./view/login/login.component";
 import {AdminPanelComponent} from "./view/admin-panel/admin-panel.component";
-import {AddUserComponent} from "./view/admin-panel/admin-panel-options/add-user/add-user.component";
 import {MainViewComponent} from "./view/main-view/main-view.component";
 import {DashboardComponent} from "./view/dashboard/dashboard/dashboard.component";
+import {SignUpComponent} from "./view/sign-up/sign-up.component";
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
@@ -18,7 +18,7 @@ const routes: Routes = [
       { path: 'addplatform', component: PlatformFormComponent },
       { path: 'platform/:id', component: PlatformDetailComponent },
       { path: 'adminpanel', component: AdminPanelComponent },
-      { path: 'add-user', component: AddUserComponent}
+      { path: 'sign-up', component: SignUpComponent}
     ]
   },
   { path: '', redirectTo: '/login', pathMatch: 'full' }

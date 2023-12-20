@@ -21,6 +21,8 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MainViewComponent} from "./view/main-view/main-view.component";
+import {SignUpComponent} from "./view/sign-up/sign-up.component";
+// import { MatFormFieldModule } from "@angular/material/form-field";
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import {MainViewComponent} from "./view/main-view/main-view.component";
     PlatformDetailComponent,
     NavigationColumnComponent,
     LoginComponent,
-    MainViewComponent
+    MainViewComponent,
+    SignUpComponent
   ],
 
   imports: [
@@ -43,11 +46,11 @@ import {MainViewComponent} from "./view/main-view/main-view.component";
     BrowserAnimationsModule,
     MatCardModule,
     MatInputModule,
+    // MatFormFieldModule,
     ReactiveFormsModule,
     MatIconModule,
     MatButtonModule,
-    MatToolbarModule,
-
+    MatToolbarModule
   ],
   providers: [
     PlatformService,
