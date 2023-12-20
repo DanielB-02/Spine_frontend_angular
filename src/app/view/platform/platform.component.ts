@@ -5,7 +5,7 @@ import {PlatformService} from "../../services/platform.service";
 @Component({
   selector: 'app-platform',
   templateUrl: './platform.component.html',
-  styleUrl: './platform.component.css'
+  styleUrl: './platform.component.scss'
 })
 export class PlatformComponent {
   platforms: Platform[];
