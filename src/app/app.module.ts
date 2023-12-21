@@ -9,7 +9,7 @@ import {AppRoutingModule} from "./app.routes";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {PlatformService} from "./services/platform.service";
-import { DashboardComponent } from './view/dashboard/dashboard/dashboard.component';
+import { DashboardComponent } from './view/dashboard/dashboard.component';
 import { PlatformDetailComponent } from './view/platform-detail/platform-detail.component';
 import { NavigationColumnComponent } from './view/navigation-column/navigation-column.component';
 import {ApiHeadersInterceptor} from "./conf/http-interceptor";

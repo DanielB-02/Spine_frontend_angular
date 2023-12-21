@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {Platform} from "../../../model/platform/platform";
-import {PlatformService} from "../../../services/platform.service";
+import {Platform} from "../../model/platform/platform";
+import {PlatformService} from "../../services/platform.service";
 
 @Component({
   selector: 'app-dashboard',
