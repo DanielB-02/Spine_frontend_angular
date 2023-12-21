@@ -6,7 +6,7 @@ import {PlatformDetailComponent} from "./view/platform-detail/platform-detail.co
 import {LoginComponent} from "./view/login/login.component";
 import {AdminPanelComponent} from "./view/admin-panel/admin-panel.component";
 import {MainViewComponent} from "./view/main-view/main-view.component";
-import {DashboardComponent} from "./view/dashboard/dashboard/dashboard.component";
+import {DashboardComponent} from "./view/dashboard/dashboard.component";
 import {SignUpComponent} from "./view/sign-up/sign-up.component";
 
 const routes: Routes = [
